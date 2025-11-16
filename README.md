@@ -7,9 +7,9 @@ Dataset needed
 - Source: Traditional Chinese Handwriting Dataset
 - Number of Chinese Characters: 13,165 
 - Sample number of every Chinese Character: 50 (40 training + 10 testing)
-- 50 images per Chinese Characters are put on /Traditional_Chinese_Data/cleaned_data folder. They are compressed to Traditional_Chinese_Data.zip and need to use 7-Zip to unzip them.
+- 50 images per Chinese Characters are put on /Traditional_Chinese_Data/cleaned_data folder. They are compressed to Traditional_Chinese_Data.zip.001 to Traditional_Chinese_Data.zip.116 (116 zip files totally) and need to use 7-Zip to unzip them.
 
-Augmentation Of Images
+Training data - Augmentation Of Images
 The following image transformations will be adopted to generate 200 augmented images per Chinese Character.
 - Translation: Tx = h / 4.0
                Ty = w / 4.0
@@ -25,12 +25,16 @@ The following image transformations will be adopted to generate 200 augmented im
              rotation_matrix = cv2.getRotationMatrix2D(basePoint, angle, 1.0)
              Rotate 80 degrees counterclockwise
 - Scaling: None, fx=1.5, fy=1.5
-           Enlarge the image's height and width to 1.5 times its original size.
+           Enlarge the image's height and width to 1.5 times their original size.
 - Shearing: M = np.array([[1.0, 0.5, 0.0], [0.5, 1.0, 0.0], [0.0, 0.0, 1.0]], dtype=np.float32)
                                 augmentedImage = cv2.warpPerspective(imgBeforeAugmentation, M, (int(w * 1.5), int(h * 1.5))
             Enlarge the image by 1.5 times
 
-After augmentation, 200 augmented images per Chinese Character will be generated. Their filename's format is (Chinese Character)_aug_001 to (Chinese Character)_aug_200. They are put on /OutPut_Sample/ folder and then all folders and files are compressed to Output_Sample.zip and need to use 7-Zip to unzip them. 
+After augmentation, 200 augmented images per Chinese Character will be generated. Their filenames' format is (Chinese Character)_aug_001 to (Chinese Character)_aug_200. They are put on /Output_Sample/ folder and then all folders and files are compressed to Output_Sample.zip.0001 to Output_Sample.zip.1033 (1033 zip files totally) and need to use 7-Zip to unzip them. 
+
+Testing model
+
+
 
 
 
