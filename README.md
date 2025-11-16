@@ -1,7 +1,7 @@
 # DIT5411-Wong-Po-Yi
 
 Introduction
-This project aims to develop an artificial intelligence software with Chinese Character Recognition. Tensorflow is the main framework of the AI software. The number of Chinese Character on the software is 13,065. Its goal is to enhance performance of Handwritten Digit Recognition.
+This project aims to develop an artificial intelligence software with Chinese Character Recognition. Tensorflow is the main framework of the AI software. The number of Chinese characters in the software is 13,065. Its goal is to enhance the performance and user experience of Handwritten Digit Recognition.
 
 Dataset needed
 - Source: Traditional Chinese Handwriting Dataset
@@ -28,6 +28,7 @@ The following image transformations will be adopted to generate 200 augmented im
 - Shearing: M = np.array([[1.0, 0.5, 0.0], [0.5, 1.0, 0.0], [0.0, 0.0, 1.0]], dtype=np.float32)
                                 augmentedImage = cv2.warpPerspective(imgBeforeAugmentation, M, (int(w * 1.5), int(h * 1.5))
             Enlarge the image by 1.5 times.
+
 
 
 
