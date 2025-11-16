@@ -55,8 +55,9 @@ The following AI models based on TensorFlow will be created for the development 
 ### Guideline
 1. Download Traditional-Chinese-Handwriting-Dataset.zip from https://github.com/AI-FREE-Team/Traditional-Chinese-Handwriting-Dataset to unzip them.
 2. Execute data_deployment_all.ipynb to unzip all_data.zip (which is located on D:\\handwritting_data_all-master\\) to /Traditional_Chinese_Data/cleaned_data.
-3. Create the model_train_test.ipynb to write the code about training the model to generate 200 augmented images per Chinese Character
-4. Write the code for testing the model.
+3. Execute data_deployment_all.ipynb to decompress cleaned_data(50_50).zip for data deployment.
+4. Create the model_train_test.ipynb to write the code about training the model to generate 200 augmented images per Chinese Character
+5. Write the code for testing the model.
 
 ### Reference
 1. Traditional Chinese Handwriting Dataset
@@ -67,4 +68,5 @@ https://github.com/kimanalytics/Handwritten-Digit-Recognition-using-Keras-and-Te
 
 3. Traditional_Chinese_Data.zip and Output_Sample.zip
 https://vtcmca-my.sharepoint.com/:f:/g/personal/220320080_stu_vtc_edu_hk/Es77JRWxgdpPut4TQn4STw4BtoKyNz5An6sqgGMfJ_Oqqg?e=gQLvdc
+
 
