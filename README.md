@@ -1,14 +1,15 @@
 # DIT5411-Wong-Po-Yi
 
-IntroductionChinese Character RecognitionThis project aims to develop an artificial intelligence software with Chinese Character Recognition. TensorFlow is the main framework for AI software. The number of Chinese characters in the software is 13,065. Its goal is to enhance the performance and user experience of Handwritten Digit Recognition.
+### Introduction
+This project aims to develop an artificial intelligence software with Chinese Character Recognition. TensorFlow is the main framework for AI software. The number of Chinese characters in the software is 13,065. Its goal is to enhance the performance and user experience of Handwritten Digit Recognition.
 
-Dataset needed
+### Dataset needed
 - Source: Traditional Chinese Handwriting Dataset
 - Number of Chinese Characters: 13,165 
 - Sample number of every Chinese Character: 50 (40 training + 10 testing)
-- 50 images per Chinese Characters are put on /Traditional_Chinese_Data/cleaned_data folder. They are compressed to Traditional_Chinese_Data.zip.001 to Traditional_Chinese_Data.zip.116 (116 zip files totally) and need to use 7-Zip to unzip them.
+- 50 images per Chinese character are put in/Traditional_Chinese_Data/cleaned_data folder. They are compressed to Traditional_Chinese_Data.zip.001 to Traditional_Chinese_Data.zip.116 (116 zip files totally) and need to use 7-Zip to unzip them.
 
-Training data - Augmentation Of Images
+### Training data - Augmentation Of Images
 The following image transformations will be adopted to generate 200 augmented images per Chinese Character.
 - Translation: Tx = h / 4.0
                Ty = w / 4.0
@@ -34,7 +35,7 @@ After augmentation, 200 augmented images per Chinese Character will be generated
 Traditional_Chinese_Data.zip and Output_Sample.zip
 https://vtcmca-my.sharepoint.com/:f:/g/personal/220320080_stu_vtc_edu_hk/Es77JRWxgdpPut4TQn4STw4BtoKyNz5An6sqgGMfJ_Oqqg?e=gQLvdc
 
-Testing Model
+### Testing Model
 The following AI models based on TensorFlow will be created for the development of Chinese Character Recognition.
 1. Input layer - It can input a single-channel (grayscale) image of 128×128 pixels, though writing the code "input_shape=(128, 128, 1)
    First convolutional layer - It uses convolution kernel of 30 sizes of 5×5(Conv2D(30, (5,5)) to extract the local characteristics of images, the size of the output feature map is 124×124×30.
@@ -47,10 +48,16 @@ The following AI models based on TensorFlow will be created for the development 
    a. First dense layer - It has 128 neurons that can be used for learning advanced feature combinations (writing code "Dense(128, activation='relu')")
    b. Second dense layer - It has 50 neurons to further abstract features (writing code "Dense(50, activation='relu')")
    c. Output layer - numberOfClasses is the quantity of neurons to output the probability distribution
-4. Loss function: It is written code as categorical_crossentropy, which can be used for the label of multiple classes
+4. Loss function: It is written code as categorical_crossentropy, which can be used for the labels of multiple classes
    Optimzer - It is written code, as Adam, to balance the convergence speed and effect.
    Evaluation index - It is presented as accuracy to monitor the correct rate of model forecast
-   
+
+### Guideline
+1. Download Traditional-Chinese-Handwriting-Dataset.zip from https://github.com/AI-FREE-Team/Traditional-Chinese-Handwriting-Dataset to unzip them.
+2. Execute data_deployment_all.ipynb to unzip all_data.zip (which is located on D:\\handwritting_data_all-master\\) to /Traditional_Chinese_Data/cleaned_data.
+3. Create the model_train_test.ipynb to write the code about training the model to generate 200 augmented images per Chinese Character
+4. Write the code for testing the model.
+
 
 
 
