@@ -32,7 +32,10 @@ The following image transformations will be adopted to generate 200 augmented im
 
 After augmentation, 200 augmented images per Chinese Character will be generated. Their filenames' format is (Chinese Character)_aug_001 to (Chinese Character)_aug_200. They are put on /Output_Sample/ folder and then all folders and files are compressed to Output_Sample.zip.0001 to Output_Sample.zip.1033 (1033 zip files totally) and need to use 7-Zip to unzip them. 
 
-Testing model
+Testing Model
+
+
+
 
 
 
