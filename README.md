@@ -7,7 +7,7 @@ Dataset needed
 - Source: Traditional Chinese Handwriting Dataset
 - Number of Chinese Characters: 13,165 
 - Sample number of every Chinese Character: 50 (40 training + 10 testing)
-- 50 images per Chinese Characters are put on Traditional_Chinese_Data\cleaned_data
+- 50 images per Chinese Characters are put on /Traditional_Chinese_Data/cleaned_data folder. They are compressed to Traditional_Chinese_Data.zip and need to use 7-Zip to unzip them.
 
 Augmentation Of Images
 The following image transformations will be adopted to generate 200 augmented images per Chinese Character.
@@ -29,7 +29,9 @@ The following image transformations will be adopted to generate 200 augmented im
 - Shearing: M = np.array([[1.0, 0.5, 0.0], [0.5, 1.0, 0.0], [0.0, 0.0, 1.0]], dtype=np.float32)
                                 augmentedImage = cv2.warpPerspective(imgBeforeAugmentation, M, (int(w * 1.5), int(h * 1.5))
             Enlarge the image by 1.5 times
-After augmentation, 200 augmented images per Chinese Character will be generated. Their filename's format is (Chinese Character)_aug_001 to (Chinese Character)_aug_200. They are put on /OutPut_Sample/ folder and then all folders and files are compressed to Output_Sample.zip and need to use 7-Zip to zip them. 
+
+After augmentation, 200 augmented images per Chinese Character will be generated. Their filename's format is (Chinese Character)_aug_001 to (Chinese Character)_aug_200. They are put on /OutPut_Sample/ folder and then all folders and files are compressed to Output_Sample.zip and need to use 7-Zip to unzip them. 
+
 
 
 
