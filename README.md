@@ -58,11 +58,13 @@ The following AI models based on TensorFlow will be created for the development 
 3. Create the model_train_test.ipynb to write the code about training the model to generate 200 augmented images per Chinese Character
 4. Write the code for testing the model.
 
+### Reference
+1. Traditional Chinese Handwriting Dataset
+https://github.com/AI-FREE-Team/Traditional-Chinese-Handwriting-Dataset
 
+2. Handwritten Digit Recognition using Keras and TensorFlow
+https://github.com/kimanalytics/Handwritten-Digit-Recognition-using-Keras-and-TensorFlow 
 
-
-
-
-
-
+3. Traditional_Chinese_Data.zip and Output_Sample.zip
+https://vtcmca-my.sharepoint.com/:f:/g/personal/220320080_stu_vtc_edu_hk/Es77JRWxgdpPut4TQn4STw4BtoKyNz5An6sqgGMfJ_Oqqg?e=gQLvdc
 
