@@ -7,7 +7,7 @@ This project aims to develop an artificial intelligence software with Chinese Ch
 - Source: Traditional Chinese Handwriting Dataset
 - Number of Chinese Characters: 13,165 
 - Sample number of every Chinese Character: 50 (40 training + 10 testing)
-- 50 images per Chinese character are put in/Traditional_Chinese_Data/cleaned_data folder. They are compressed to Traditional_Chinese_Data.zip.001 to Traditional_Chinese_Data.zip.116 (116 zip files totally) and need to use 7-Zip to unzip them.
+- 50 images per Chinese character are put in/Traditional_Chinese_Data/cleaned_data folder. They are compressed to Traditional_Chinese_Data.zip and need to use 7-Zip to unzip them.
 
 ### Training data - Augmentation Of Images
 The following image transformations will be adopted to generate 200 augmented images per Chinese Character.
@@ -30,7 +30,7 @@ The following image transformations will be adopted to generate 200 augmented im
                                 augmentedImage = cv2.warpPerspective(imgBeforeAugmentation, M, (int(w * 1.5), int(h * 1.5))
             Enlarge the image by 1.5 times
 
-After augmentation, 200 augmented images per Chinese Character will be generated. Their filenames' format is (Chinese Character)_aug_001 to (Chinese Character)_aug_200. They are put on /Output_Sample/ folder and then all folders and files are compressed to Output_Sample.zip.0001 to Output_Sample.zip.1033 (1033 zip files totally) and need to use 7-Zip to unzip them. 
+After augmentation, 200 augmented images per Chinese Character will be generated. Their filenames' format is (Chinese Character)_aug_001 to (Chinese Character)_aug_200. They are put in /Output_Sample/ folder, and then all folders and files are compressed to Output_Sample.zip and need to use 7-Zip to unzip them. 
 
 Traditional_Chinese_Data.zip and Output_Sample.zip
 https://vtcmca-my.sharepoint.com/:f:/g/personal/220320080_stu_vtc_edu_hk/Es77JRWxgdpPut4TQn4STw4BtoKyNz5An6sqgGMfJ_Oqqg?e=gQLvdc
@@ -57,6 +57,7 @@ The following AI models based on TensorFlow will be created for the development 
 2. Execute data_deployment_all.ipynb to unzip all_data.zip (which is located on D:\\handwritting_data_all-master\\) to /Traditional_Chinese_Data/cleaned_data.
 3. Create the model_train_test.ipynb to write the code about training the model to generate 200 augmented images per Chinese Character
 4. Write the code for testing the model.
+
 
 
 
