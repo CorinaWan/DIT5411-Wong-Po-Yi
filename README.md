@@ -1,7 +1,6 @@
 # DIT5411-Wong-Po-Yi
 
-Introduction
-This project aims to develop an artificial intelligence software with Chinese Character Recognition. Tensorflow is the main framework of the AI software. The number of Chinese characters in the software is 13,065. Its goal is to enhance the performance and user experience of Handwritten Digit Recognition.
+IntroductionChinese Character RecognitionThis project aims to develop an artificial intelligence software with Chinese Character Recognition. TensorFlow is the main framework for AI software. The number of Chinese characters in the software is 13,065. Its goal is to enhance the performance and user experience of Handwritten Digit Recognition.
 
 Dataset needed
 - Source: Traditional Chinese Handwriting Dataset
@@ -32,16 +31,26 @@ The following image transformations will be adopted to generate 200 augmented im
 
 After augmentation, 200 augmented images per Chinese Character will be generated. Their filenames' format is (Chinese Character)_aug_001 to (Chinese Character)_aug_200. They are put on /Output_Sample/ folder and then all folders and files are compressed to Output_Sample.zip.0001 to Output_Sample.zip.1033 (1033 zip files totally) and need to use 7-Zip to unzip them. 
 
+Traditional_Chinese_Data.zip and Output_Sample.zip
+https://vtcmca-my.sharepoint.com/:f:/g/personal/220320080_stu_vtc_edu_hk/Es77JRWxgdpPut4TQn4STw4BtoKyNz5An6sqgGMfJ_Oqqg?e=gQLvdc
+
 Testing Model
-
-
-
-
-
-
-
-
-
+The following AI models based on TensorFlow will be created for the development of Chinese Character Recognition.
+1. Input layer - It can input a single-channel (grayscale) image of 128×128 pixels, though writing the code "input_shape=(128, 128, 1)
+   First convolutional layer - It uses convolution kernel of 30 sizes of 5×5(Conv2D(30, (5,5)) to extract the local characteristics of images, the size of the output feature map is 124×124×30.
+2. First pooling layer - Max pooling of 2×2(writing code "MaxPooling2D(pool_size=(2,2))") is used to downsample the feature map size to 62×62×30.
+   Second pooling layer - 15 Convolution kernel of 3×3 (writing code "Conv2D(15, (3,3))"), to output the size feature map to 60×60×15.
+   Third pooling layer - 2×2 max pooling again, drop the size of the feature map to 30×30×15.
+3. Dropout layer - 20% probability throw neurons (writing code "Dropout (0.2)) to uppress overfitting, which can improve the generalisation of the model
+   Flatten layer - Flattening the 3D Feature Map of 30×30×15 to a one-dimensional vector, which can be the input of the fully connected layer
+   Fully connected layer
+   a. First dense layer - It has 128 neurons that can be used for learning advanced feature combinations (writing code "Dense(128, activation='relu')")
+   b. Second dense layer - It has 50 neurons to further abstract features (writing code "Dense(50, activation='relu')")
+   c. Output layer - numberOfClasses is the quantity of neurons to output the probability distribution
+4. Loss function: It is written code as categorical_crossentropy, which can be used for the label of multiple classes
+   Optimzer - It is written code, as Adam, to balance the convergence speed and effect.
+   Evaluation index - It is presented as accuracy to monitor the correct rate of model forecast
+   
 
 
 
