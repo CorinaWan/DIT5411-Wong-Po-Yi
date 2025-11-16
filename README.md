@@ -69,5 +69,5 @@ https://github.com/kimanalytics/Handwritten-Digit-Recognition-using-Keras-and-Te
 3. Traditional_Chinese_Data.zip, Output_Sample.zip and trained_model.h5
 https://vtcmca-my.sharepoint.com/:f:/g/personal/220320080_stu_vtc_edu_hk/Es77JRWxgdpPut4TQn4STw4BtoKyNz5An6sqgGMfJ_Oqqg?e=gQLvdc
 
-
-
+### Author
+Wong Po Yi
